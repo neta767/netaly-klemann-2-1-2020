@@ -2,12 +2,20 @@
     <mat-toolbar-row>
         <span>Weather</span>
         <span class="space-class"></span>
-        <nav>
+        <!-- <mat-tab-group>
             <a routerLink="/weather-forecast" routerLinkActive="active">
-                <mat-icon>favorite</mat-icon>
+                <mat-tab label="Home"></mat-tab>
             </a>
-            <a routerLink="/favorites-list" routerLinkActive="active">
-                <mat-icon>delete</mat-icon>
+            <a mat-tab-link routerLink="/favorites-list" routerLinkActive="active">
+                <mat-tab label="Favorites"></mat-tab>
+                Favorites
+            </a>
+        </mat-tab-group> -->
+
+        <nav mat-tab-nav-bar>
+            <a mat-tab-link *ngFor="let link of navLinks" [routerLink]="link.path" routerLinkActive
+                #rla="routerLinkActive" [active]="rla.isActive">
+                {{link.label}}
             </a>
         </nav>
     </mat-toolbar-row>
