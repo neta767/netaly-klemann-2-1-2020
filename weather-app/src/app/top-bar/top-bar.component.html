@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span>Weather</span>
+        <span class="space-class"></span>
+        <nav>
+            <a routerLink="/weather-forecast" routerLinkActive="active">
+                <mat-icon>favorite</mat-icon>
+            </a>
+            <a routerLink="/favorites-list" routerLinkActive="active">
+                <mat-icon>delete</mat-icon>
+            </a>
+        </nav>
+    </mat-toolbar-row>
+</mat-toolbar>
+<router-outlet></router-outlet>
